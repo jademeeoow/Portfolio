@@ -11,14 +11,37 @@
   font-family: Arial, sans-serif;
 }
 
-.greetings {
+.greeting-wrapper {
+  margin-top: 100px;
+  width: 100%;
+  height: 50px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 140px;
+  overflow: hidden; 
 }
+
+.greetings {
+
+  font-size: 24px; 
+  font-weight: bold;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+
+
+
+
 
 .profileContainer {
   position: relative;
@@ -67,6 +90,7 @@
   color: gray;
 }
 
+
 .socialIcons {
   display: flex;
   justify-content: center;
@@ -83,12 +107,34 @@
   color: #000;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s ease;
 }
 
 .social {
   width: 40px; 
   height: 40px;
   margin-bottom: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+
+.icon:nth-child(1) .social:hover {
+  filter: invert(24%) sepia(100%) saturate(1000%) hue-rotate(200deg) brightness(90%) contrast(100%);
+}
+
+
+.icon:nth-child(2) .social:hover {
+  filter: invert(48%) sepia(93%) saturate(500%) hue-rotate(320deg) brightness(90%) contrast(100%);
+}
+
+
+.icon:nth-child(3) .social:hover {
+  filter: invert(32%) sepia(80%) saturate(900%) hue-rotate(190deg) brightness(90%) contrast(100%);
+}
+
+
+.icon:hover .POP {
+  color: inherit;
 }
 
 .POP {
@@ -120,8 +166,9 @@
   }
 
   .greetings {
-    margin-top: 100px;
+ 
     font-size: 20px;
+ 
   }
 
   .name {

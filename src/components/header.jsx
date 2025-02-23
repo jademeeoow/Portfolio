@@ -12,7 +12,8 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const handleLogoClick = () => {
+  const handleLogoClick = (e) => {
+    e.preventDefault(); 
     setFlaming(true);
     setTimeout(() => {
       setFlaming(false);
@@ -22,9 +23,9 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo" onClick={handleLogoClick}>
-        <Link to="/">
+   
           <img src={logo} alt="Logo" className={flaming ? 'flaming-logo' : ''} />
-        </Link>
+       
       </div>
       <div className="menu-icon" onClick={toggleMenu}>
         <span className={menuOpen ? 'bar open' : 'bar'}></span>
