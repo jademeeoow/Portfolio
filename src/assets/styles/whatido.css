@@ -1,82 +1,120 @@
-.whatido {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #ffffff;
-    font-family: 'Poppins', sans-serif;
+body{
+    background: #fafafa!important;
 }
 
-.section-title {
-    font-size: 32px;
+.whatido {
+    margin-top:80px;
+    text-align: center;
+    padding: 40px 20px;
+    background: #fafafa!important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
     font-weight: 700;
-    background-color: #ffffff;
     color: #c0004f;
     margin-bottom: 40px;
-}
+  }
+  
 
-.services {
-    background-color: #ffffff;
+  /* div{
+
+    border: 1px red solid;
+  } */
+  .services {
+  
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 50px;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 40px;
     max-width: 1200px;
-    margin: 0 auto;
-}
-
-.service {
-    background-color: #ffffff;
+    margin:  auto;
+  }
+  
+  .service {
+   
+    background: #fafafa;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    padding: 30px 20px;
     text-align: center;
-    max-width: 350px;
-}
-
-.service-icon {
-    background-color: #ffffff;
-    width: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+ 
+    
+  }
+  
+  .service:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  }
+  
+  .service-icon {
+    width: 60px;
     height: auto;
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-
-.service-icon:hover {
+  }
+  
+  .service-icon:hover {
     transform: scale(1.2) rotate(10deg);
     opacity: 0.9;
-}
-
-.service-title {
-    font-size: 22px;
+  }
+  
+  .service-title {
+    font-size: 20px;
     font-weight: 600;
-    background-color: #ffffff;
     color: #000;
     margin-bottom: 10px;
-}
-
-.service-description {
-    background-color: #ffffff;
-    font-size: 16px;
+  }
+  
+  .service-description {
+    font-size: 15px;
     color: #555;
     line-height: 1.6;
-}
+  }
 
-@media (max-width: 1024px) {
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .service-icon {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  
+  @media (max-width: 1024px) {
     .services {
-        flex-direction: column;
-        gap: 30px;
+      flex-direction: column;
+      gap: 30px;
     }
-
+  
     .service {
-        max-width: 100%;
+      width: 90%;
+      margin: 0 auto;
     }
-
+  
     .service-icon {
-        width: 70px;
+      width: 70px;
     }
-
+  
     .service-title {
-        font-size: 20px;
+      font-size: 19px;
     }
-
+  
     .service-description {
-        font-size: 15px;
+      font-size: 14px;
     }
-}
+  }
+  
