@@ -7,12 +7,22 @@ const BlogModal = ({ isOpen, blog, onClose }) => {
 
   return (
     <div className="blog-modal-overlay" onClick={onClose}>
-      <div className="blog-modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="blog-modal-close" onClick={onClose}>
-          <FaTimes />
-        </button>
+   <div
+  className={`blog-modal-content ${blog.title === "Baguio Night Market" ? "baguio-market" : ""}`}
+  onClick={(e) => e.stopPropagation()}
+>
+  <button className="blog-modal-close" onClick={onClose}>
+    <FaTimes />
+  </button>
         <div className="blog-modal-image-container">
-          <img src={blog.image} alt={blog.title} className="blog-modal-image" />
+        <img
+  src={blog.image}
+  alt={blog.title}
+  className={`blog-modal-image ${
+    blog.title === "Baguio Night Market" ? "baguio-market-image" : ""
+  }`}
+/>
+
         </div>
         <div className="blog-modal-text">
           <h3 className="blog-modal-title">{blog.title}</h3>

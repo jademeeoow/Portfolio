@@ -4,12 +4,13 @@ import '../../assets/styles/blogs.css';
 import BlogModal from '../modal/blog_modal';
 
 // Import blog images
-import blog1 from '../../assets/images/blogs/day1.jfif';
+import blog1 from '../../assets/images/blogs/day1.png';
 import blog2 from '../../assets/images/blogs/day2.jfif';
 import blog3 from '../../assets/images/blogs/day3.jfif';
 import blog4 from '../../assets/images/blogs/day4.jfif';
 import blog5 from '../../assets/images/blogs/day5.jfif';
 import blog6 from '../../assets/images/blogs/day6.png';
+import blog7 from '../../assets/images/blogs/day7.png';
 
 const blogs = [
   {
@@ -53,7 +54,16 @@ const blogs = [
     link: "#",
     date: "April 12, 2025",
     description: "A peaceful visit to the Bell Church in Baguio, experiencing its unique blend of Chinese and Filipino architecture and culture."
+  },
+  {
+    title: "Baguio Night Market",
+    image: blog7,
+    link: "#",
+    date: "April 13, 2025",
+    description: "Me and My Friends Roaming Around Baguio's Night Market Trying to find something to buy like  souvenirs or food.",
+    className: "baguio-market"
   }
+  
 ];
 
 const Blogs = () => {
