@@ -1,0 +1,26 @@
+  
+   .close-btn-container {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+  
+  
+  
+  .close-btn-1 {
+
+    margin-top: 20px;
+   
+    background-color: #c0004f;
+    color: black;
+
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border:2px solid black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;;
+  }
+  

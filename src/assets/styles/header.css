@@ -73,26 +73,36 @@
     font-weight: bold;
 }
 
-
-
 .nav ul li a {
     background-color: transparent;
-
-}
-
-.nav ul li a {
-
     text-decoration: none;
     color: black;
     transition: color 0.3s ease-in-out;
+    position: relative; 
 }
 
 
 
 
-.nav ul li a:hover {
-    color: crimson;
+.nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;  
+    bottom: -2px;
+    width: 0;  
+    height: 2px;
+    background-color: crimson;
+    
+    transform: translateX(-50%); 
+    transition: width 0.3s ease-in-out;
 }
+
+.nav ul li a:hover::after {
+    width: 100%;  
+}
+
+
+
 
 
 
@@ -111,6 +121,18 @@
     transition: all 0.3s ease-in-out;
 }
 
+
+
+
+.download-btn {
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+ 
+
+    color: crimson;
+    cursor: pointer;
+  }
 
 
 
