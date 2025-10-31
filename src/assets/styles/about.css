@@ -1,0 +1,363 @@
+.about {
+  width: 100%;
+  padding: clamp(4rem, 10vw, 8rem) 0;
+  background: #fff;
+  position: relative;
+}
+
+.section-divider {
+  width: 100%;
+  height: clamp(60px, 12vw, 100px);
+  background: linear-gradient(to bottom, transparent, #fdf1f3);
+}
+
+/* MAIN CONTAINER */
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 clamp(1.5rem, 5vw, 3rem);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* TITLE & TEXT */
+.about-text h2 {
+  color: #e5203a;
+  font-size: clamp(2.2rem, 6vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  position: relative;
+  line-height: 1.1;
+}
+
+.about-text h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: #e5203a;
+  border-radius: 2px;
+}
+
+.about-text h2 span {
+  color: black;
+}
+
+.about-text p {
+  font-size: clamp(1.05rem, 2.2vw, 1.15rem);
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.about-highlight {
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  color: #111;
+  font-weight: 700;
+  background: linear-gradient(135deg, #e5203a, #ff6b7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 0.5rem 0;
+  position: relative;
+  display: inline-block;
+}
+
+.about-highlight strong {
+  background: linear-gradient(135deg, #e5203a, #ff6b7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* STATS CARDS - Improved Layout */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(229, 32, 58, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.stat-card:hover::before {
+  left: 100%;
+}
+
+.stat-card:hover {
+  background: #e5203a;
+  color: white;
+  box-shadow: 0 20px 40px rgba(229, 32, 58, 0.25);
+  transform: translateY(-8px);
+  animation: floatCard 3s ease-in-out infinite;
+}
+
+.stat-card h3 {
+  color: black;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  transition: color 0.3s ease;
+}
+
+.stat-card:hover h3 {
+  color: white;
+}
+
+.stat-card p {
+  font-size: 0.95rem;
+
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.stat-card:hover p {
+  opacity: 0.9;
+  color: white;
+}
+
+/* RIGHT COLUMN - Improved Image Container */
+.about-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  position: relative;
+}
+
+.about-image-wrapper {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  max-width: 420px;
+  width: 100%;
+
+  padding: 12px;
+
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-image-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 3px solid #e5203a;
+}
+
+
+.cat-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background: linear-gradient(transparent, rgba(229, 32, 58, 0.9));
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.cat-overlay h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.cat-overlay p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+/* SKILLS - UNIFORM WIDTH */
+.about-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  max-width: 500px;
+  width: 100%;
+}
+
+.skill-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: black;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  min-height: 54px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.skill-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(229, 32, 58, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.skill-badge:hover::before {
+  left: 100%;
+}
+
+.skill-badge:hover {
+  background: #e5203a;
+  color: white;
+  border-color: #e5203a;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(229, 32, 58, 0.3);
+}
+
+.skill-badge svg {
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+  color: #e5203a;
+  flex-shrink: 0;
+}
+
+.skill-badge:hover svg {
+  color: white;
+}
+
+/* ✅ DESKTOP: SIDE-BY-SIDE GRID */
+@media (min-width: 992px) {
+  .about-wrapper {
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: start;
+    gap: 6rem;
+  }
+  
+  .about-image-container {
+    position: sticky;
+    top: 3rem;
+  }
+  
+  .about-text {
+    padding-right: 2rem;
+  }
+  
+  .about-skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE OPTIMIZATIONS */
+@media (max-width: 768px) {
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .cat-overlay {
+    padding: 1.25rem;
+  }
+  
+  .cat-overlay h4 {
+    font-size: 1.1rem;
+  }
+  
+  .about-image-wrapper {
+    max-width: 100%;
+  }
+  
+  .skill-badge {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+    min-height: 50px;
+  }
+  
+  .about-skills {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .about-skills {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+}

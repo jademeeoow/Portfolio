@@ -1,29 +1,62 @@
-import '../assets/styles/hero.css'
-import tracy from '../assets/images/tracy pic.png'
-import Button from './button-me';
-import { useNavigate } from "react-router-dom";
+import { FaFacebookF, FaInstagram, FaGithub } from "react-icons/fa";
+import "../assets/styles/hero.css";
+import profile from "../assets/images/me/jdpixel.jpeg";
 
 const Hero = () => {
-  const navigate = useNavigate ();
-    return (
-      <div className="hero">
-        <div className="me">
-          <h1 className="kahitano">Hello I'm</h1>
-          <h2 className="pangalawa">Tracy Anne Ingua</h2>
-          <h3 className="pangatlo">
-          I craft intuitive and engaging digital experiences that is blend aesthetics with functionality. With a keen eye for design and a user-first approach, I create seamless interfaces that enhance usability and elevate brands. Let's bring ideas to life with thoughtful design!
-          </h3>
-          <button
-              title="About Me"
-              onClick={() => navigate("/about")}
-            >
-              About Me
-            </button>
-        </div>
-        <div className="imageContainer">
-          <img src={tracy} alt="Tracy Anne Ingua" />
+  return (
+    <section className="hero">
+      <div className="hero-content">
+        <h3>Hi, there!</h3>
+        <h1>
+          <span>JD</span> IS HERE TO BE YOUR BACK-END DEVELOPER
+        </h1>
+        <p className="motto">"If you can define it, I can make it!"</p>
+        <p className="tagline">
+          Turning complex problems into elegant technical solutions.
+        </p>
+      </div>
+
+      <div className="hero-image">
+        <img 
+          src={profile} 
+          alt="JD - Back-End Developer" 
+          loading="lazy"
+        />
+
+        <div className="social-icons">
+          <a 
+            href="https://www.facebook.com/Jd.Delena21/"
+            className="icon facebook"
+            aria-label="Visit Facebook profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebookF />
+          </a>
+
+          <a 
+            href="https://www.instagram.com/alymeeoow/"
+            className="icon instagram"
+            aria-label="Visit Instagram profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </a>
+
+          <a 
+            href="https://github.com/alymeeoow"
+            className="icon github"
+            aria-label="Visit GitHub profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+          </a>
         </div>
       </div>
-    );
-  };
-export default Hero
+    </section>
+  );
+};
+
+export default Hero;

@@ -1,24 +1,92 @@
-import "./about.css";
-import img from "./../assets/images/type type.jpg"
+import "../assets/styles/about.css";
+import catImage from "../assets/images/me/meowy.jpg"; 
 
-export default function navigation() {
-    return (
-        <div className="container">
-            <div className="upperContainer">
-                <h1>About Me</h1>
+
+import { FaPhp, FaReact, FaGit, FaPaw } from "react-icons/fa";
+import { DiDjango, DiMysql, DiPython } from "react-icons/di";
+import { SiMariadb, SiSqlite } from "react-icons/si";
+
+const About = () => {
+  return (
+    <>
+      <section className="about">
+        <div className="about-wrapper">
+
+         
+          <div className="about-text">
+            <h2>
+              <span>About</span> Me
+            </h2>
+
+            <p className="about-highlight">
+              I don't just write code — <strong>I solve problems.</strong>
+            </p>
+
+            <p>
+              I'm JD, a Back-End developer focused on building scalable, secure
+              and high-performing systems using PHP, Django, React and SQL databases.
+            </p>
+
+            <p>
+              I specialize in debugging, performance optimization and creating clean,
+              maintainable architectures for real-world applications.
+            </p>
+
+            <p>
+              Outside of development, I'm a gamer — Dota 2, Mobile Legends, and
+              Clash of Clans. Strategy, teamwork and smart decisions are part of
+              everything I do.
+            </p>
+
+            <div className="about-stats">
+              <div className="stat-card">
+                <h3>10+</h3>
+                <p>Projects Completed</p>
+              </div>
+
+              <div className="stat-card">
+                <h3>2+ Years</h3>
+                <p>Development Experience</p>
+              </div>
+
+              <div className="stat-card">
+                <h3>100%</h3>
+                <p>Passion & Dedication</p>
+              </div>
             </div>
-            <div className="lowerContainer">
-                <div className="imageContent">
-                    <img src= {img} alt="" />
-                </div>
-                <p className="aboutMe">Hi there! I’m Tracy Anne, a passionate Graphic Designer, UI/UX Designer, and Photographer dedicated to crafting intuitive and engaging digital experiences. With a keen eye for aesthetics and a deep understanding of user needs, I specialize in creating seamless interfaces that not only enhance usability but also bring brands to life through thoughtful design.
+          </div>
 
-My journey in the world of design is fueled by creativity, attention to detail, and a constant drive to explore new ideas. Whether it’s designing user-centric digital solutions, developing unique branding, or capturing life’s special moments through photography, I strive to deliver work that resonates and inspires.
-
-I believe that great design goes beyond visuals—it tells a story, evokes emotions, and solves problems. Let’s work together to transform your vision into captivating designs and unforgettable experiences!</p>
-
+      
+          <div className="about-image-container">
+            <div className="about-image-wrapper">
+              <img 
+                src={catImage} 
+                alt="Cute cat as coding companion"
+                className="about-image" 
+              />
+              
+              <div className="cat-overlay">
+                <h4><FaPaw /> This is me when debbuging</h4>
+                <p>Just look in my eyes</p>
+              </div>
             </div>
+
+            <div className="about-skills">
+              <span className="skill-badge"><FaPhp /> PHP</span>
+              <span className="skill-badge"><DiDjango /> Django</span>
+              <span className="skill-badge"><FaReact /> React</span>
+              <span className="skill-badge"><DiMysql /> MySQL</span>
+              <span className="skill-badge"><SiMariadb /> MariaDB</span>
+              <span className="skill-badge"><SiSqlite /> SQLite</span>
+              <span className="skill-badge"><DiPython /> Python</span>
+              <span className="skill-badge"><FaGit /> Git</span>
+            </div>
+          </div>
+
         </div>
+      </section>
+    </>
+  );
+};
 
-    );
-  }
+export default About;
