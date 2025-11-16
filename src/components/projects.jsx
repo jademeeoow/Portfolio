@@ -12,7 +12,8 @@ import {
   FaCss3Alt,
   FaGoogle,
   FaDatabase,
-  FaMobile
+  FaMobile,
+  FaPaypal
 } from "react-icons/fa";
 import { 
   SiDjango, 
@@ -31,6 +32,9 @@ import wikangaraboImage from "../assets/images/projects/arabo.png";
 import merakiImage from "../assets/images/projects/meraki1.png";
 import pokedexImage from "../assets/images/projects/pokemon.png";
 import ecommerceImage from "../assets/images/projects/todo.png";
+import rnrImage from "../assets/images/projects/rnr.png";
+import tutoriaImage from "../assets/images/projects/tutoria.png";
+import bidwaveImage from "../assets/images/projects/bidwave.png";
 
 
 import ProjectModal from "../components/project-modal";
@@ -78,7 +82,8 @@ const prevProject = () => {
     'Node.js': <SiNodedotjs className="tech-icon" />,
     'MongoDB': <SiMongodb className="tech-icon" />,
     'Stripe': <SiStripe className="tech-icon" />,
-    'JWT': <FaJs className="tech-icon" />
+    'JWT': <FaJs className="tech-icon" />,
+    'PayPal': <FaPaypal className="tech-icon" /> 
   };
 
   const projects = [
@@ -91,17 +96,42 @@ const prevProject = () => {
       githubUrl: "https://github.com/alysssi/BARANGAY_DJANGO",
       liveUrl: "https://delanajd.pythonanywhere.com/",
     },
+
+  {
+    id: 2,
+      title: "RNR ",
+      description: "An E-commerce Website for Food Ordering Specifically Tapsilogs.",
+      image: rnrImage,
+      technologies: ["PHP", "MariaDB", "PayPal", "HTML", "CSS", "JavaScript"],
+      githubUrl: "https://github.com/alysssi/rnr.git",
+      liveUrl: "https://rnr.free.nf/",
+    
+    },
+
     {
-      id: 2,
+      id: 3,
+      title: "Bidwave",
+      description: "A bidding type E-Commerce of all sorts of things",
+      image: bidwaveImage,
+      technologies: ["PHP", "MariaDB", "HTML", "CSS", "JavaScript"],
+      githubUrl: "https://github.com/alymeeoow/bidwave.git",
+      liveUrl: "https://bidwave.free.nf/",
+
+    },
+
+
+    {
+      id: 4,
       title: "Lines Hub",
       description: "Service information hub with user management, content organization, and responsive design.",
       image: lineshubImage,
       technologies: ["PHP", "MariaDB", "HTML", "CSS", "JavaScript"],
       githubUrl: "https://github.com/jademeeoow/lineshub",
       liveUrl: "https://bis.free.nf/templates/html/index.php?i=1",
+
     },
     {
-      id: 3,
+      id: 5,
       title: "Meraki Product Design Showcase",
       description: "A showcase of the product we made digitally for our little school company.",
       image: merakiImage,
@@ -110,7 +140,7 @@ const prevProject = () => {
       liveUrl: "https://alysssi.github.io/Meraki/index.html",
     },
     {
-      id: 4,
+      id: 6,
       title: "Just Do It",
       description: "A react powered To do list app.",
       image: ecommerceImage,
@@ -119,7 +149,7 @@ const prevProject = () => {
       liveUrl: "https://jnjtodo.netlify.app/",
     },
     {
-      id: 5,
+      id: 7,
       title: "Pokédex React App",
       description: "Pokémon encyclopedia with search, filters, and API integration.",
       image: pokedexImage,
@@ -128,14 +158,32 @@ const prevProject = () => {
       liveUrl: "https://jnjpokemon.netlify.app/",
     },
     {
-      id: 6,
+      id: 8,
       title: "Wikang Arabo",
       description: "Arabic language learning platform using Google Translate API with exercises and cultural content.",
       image: wikangaraboImage,
       technologies: ["Python", "Django", "SQLite3", "Google API", "HTML", "CSS", "JavaScript"],
-      githubUrl: "https://github.com/yourusername/wikang-arabo",
+      githubUrl: "https://github.com/alymeeoow/wikang-arabo.git",
       liveUrl: "https://your-wikangarabo-demo.com",
-    }
+    },
+ 
+
+    
+    {
+      id: 9,
+      title: "Tutoria",
+      description: "A platform that connects teachers and parents—teachers can offer their tutoring services, while parents can easily find the right tutor for their child.",
+      image: tutoriaImage,
+      technologies: ["Python", "Django", "SQLite3", "HTML", "CSS", "JavaScript"],
+      githubUrl: "https://github.com/alysssi/rnr.git",
+      liveUrl: "https://tutoria2024.pythonanywhere.com/",
+      
+  },
+
+
+
+
+    
   ];
 
   const openModal = (project) => {
@@ -218,7 +266,7 @@ const prevProject = () => {
 
         <div className="projects-more">
           <a 
-            href="https://github.com/yourusername" 
+            href="https://github.com/alymeeoow" 
             className="view-more-btn"
             target="_blank" 
             rel="noopener noreferrer"
