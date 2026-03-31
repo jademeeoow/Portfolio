@@ -8,17 +8,24 @@ import {
   FaJs,
   FaHtml5,
   FaDatabase,
+
   FaCogs,
   FaChartLine,
   FaRocket,
   FaTools,
-  FaCrosshairs
+  FaCrosshairs,
+  FaReact
 } from 'react-icons/fa';
+
 import { 
   SiDjango, 
   SiMariadb, 
   SiSqlite,
-  SiGooglecloud
+  SiGooglecloud,
+  SiFirebase,
+  SiZapier,
+  SiN8N,
+
 } from 'react-icons/si';
 
 // Tech icons mapping
@@ -32,9 +39,15 @@ const techIcons = {
   'SQLite3': <SiSqlite className="tech-icon" />,
   'Google Translate API': <SiGooglecloud className="tech-icon" />,
   'JavaScript': <FaJs className="tech-icon" />,
-  'HTML': <FaHtml5 className="tech-icon" />
-};
+  'HTML': <FaHtml5 className="tech-icon" />,
 
+  // 🔥 NEW (your current stack)
+  'React': <FaReact className="tech-icon" />,
+  'Firebase': <SiFirebase className="tech-icon" />,
+  'n8n': <SiN8N className="tech-icon" />,
+  'Zapier': <SiZapier className="tech-icon" />,
+'Power Automate': <FaCogs className="tech-icon" />,
+};
 const Experience = () => {
   const experienceRef = useRef(null);
   const itemsRef = useRef([]);
@@ -82,7 +95,61 @@ const Experience = () => {
       icon: <FaCode />,
       type: "fullstack",
       accentColor: "#667eea"
-    }
+    },
+{
+  id: 3,
+  role: "Full Stack ",
+  company: "HYACINTH INDUSTRIES",
+  period: "2025 - Present",
+  description: "Developed and maintained internal web applications to support business operations in a BPO environment. Built dynamic and responsive interfaces using React and managed backend services with Firebase. Focused on improving application performance, ensuring reliable data handling, and delivering scalable and user-friendly solutions.",
+  technologies: [
+    "React",
+    "Firebase",
+    "JavaScript",
+    "HTML",
+    "CSS"
+  ],
+  focusAreas: [
+    "Full Stack Development",
+    "System Integration",
+    "Performance Optimization",
+    "UI/UX Design"
+  ],
+  icon: <FaTools />,
+  type: "fullstack",
+  accentColor: "#10b981"
+},
+{
+  id: 4,
+  role: "Automation Engineer",
+  company: "TOGO",
+  period: "2026 - Present",
+  description: "Designed and implemented automation solutions for logistics operations, streamlining workflows and improving overall efficiency. Built automated processes using n8n, Zapier, and Power Automate to handle repetitive tasks, data synchronization, and system integrations. Worked with APIs to connect various services and ensure seamless data flow. Developed supporting web interfaces using React and Supabase for real-time data management and monitoring.",
+  technologies: [
+    "React",
+    "Supabase",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "n8n",
+    "Zapier",
+    "Power Automate",
+    "API Integration"
+  ],
+  focusAreas: [
+    "Automation",
+    "Workflow Optimization",
+    "API Integration",
+    "System Integration",
+    "Process Improvement"
+  ],
+  icon: <FaCogs />,
+  type: "automation",
+  accentColor: "#ec4899" 
+}
+
+
+    
   ];
 
   return (

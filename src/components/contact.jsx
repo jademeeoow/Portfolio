@@ -140,7 +140,7 @@ const Contact = () => {
       icon: <FaLinkedin />,
       title: "LinkedIn",
       value: "JD Deleña",
-      link: "https://www.linkedin.com/in/jd-dele%C3%B1a-391220256/"
+      link: "https://www.linkedin.com/in/ronson-dele%C3%B1a-391220256/"
     },
     {
       icon: <FaGithub />,
@@ -198,10 +198,7 @@ const Contact = () => {
                   ))}
                 </div>
 
-                <div className="availability-badge">
-                  <div className="status-dot"></div>
-                  <span>Available for new projects</span>
-                </div>
+               
               </div>
             </div>
 

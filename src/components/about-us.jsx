@@ -1,10 +1,29 @@
 import "../assets/styles/about.css";
 import catImage from "../assets/images/me/meowy.jpg"; 
 
+import { 
+  FaPhp, 
+  FaReact, 
+  FaGit, 
+  FaPaw, 
+  FaNodeJs,
+  FaCogs
+} from "react-icons/fa";
 
-import { FaPhp, FaReact, FaGit, FaPaw } from "react-icons/fa";
-import { DiDjango, DiMysql, DiPython } from "react-icons/di";
-import { SiMariadb, SiSqlite } from "react-icons/si";
+import { 
+  DiDjango, 
+  DiMysql, 
+  DiPython 
+} from "react-icons/di";
+
+import { 
+  SiMariadb, 
+  SiSqlite, 
+  SiFirebase,
+  SiZapier,
+  SiN8N
+} from "react-icons/si";
+
 
 const About = () => {
   return (
@@ -12,7 +31,7 @@ const About = () => {
       <section className="about">
         <div className="about-wrapper">
 
-         
+          {/* TEXT */}
           <div className="about-text">
             <h2>
               <span>About</span> Me
@@ -23,13 +42,14 @@ const About = () => {
             </p>
 
             <p>
-              I'm JD, a Back-End developer focused on building scalable, secure
-              and high-performing systems using PHP, Django, React and SQL databases.
+              I'm JD, a Full Stack & Automation Engineer focused on building scalable,
+              efficient, and high-performing systems using modern web technologies.
             </p>
 
             <p>
-              I specialize in debugging, performance optimization and creating clean,
-              maintainable architectures for real-world applications.
+              I specialize in developing full stack applications with React and Firebase,
+              and creating automation workflows using tools like n8n, Zapier, and Power Automate
+              to optimize business processes.
             </p>
 
             <p>
@@ -38,6 +58,7 @@ const About = () => {
               everything I do.
             </p>
 
+            {/* STATS */}
             <div className="about-stats">
               <div className="stat-card">
                 <h3>10+</h3>
@@ -45,7 +66,7 @@ const About = () => {
               </div>
 
               <div className="stat-card">
-                <h3>2+ Years</h3>
+                <h3>2+ Year</h3>
                 <p>Development Experience</p>
               </div>
 
@@ -56,7 +77,7 @@ const About = () => {
             </div>
           </div>
 
-      
+          {/* IMAGE */}
           <div className="about-image-container">
             <div className="about-image-wrapper">
               <img 
@@ -66,21 +87,30 @@ const About = () => {
               />
               
               <div className="cat-overlay">
-                <h4><FaPaw /> This is me when debbuging</h4>
+                <h4><FaPaw /> This is me when debugging</h4>
                 <p>Just look in my eyes</p>
               </div>
             </div>
 
+            {/* SKILLS */}
             <div className="about-skills">
               <span className="skill-badge"><FaPhp /> PHP</span>
               <span className="skill-badge"><DiDjango /> Django</span>
               <span className="skill-badge"><FaReact /> React</span>
+              <span className="skill-badge"><FaNodeJs /> Node.js</span>
+              <span className="skill-badge"><SiFirebase /> Firebase</span>
               <span className="skill-badge"><DiMysql /> MySQL</span>
               <span className="skill-badge"><SiMariadb /> MariaDB</span>
               <span className="skill-badge"><SiSqlite /> SQLite</span>
               <span className="skill-badge"><DiPython /> Python</span>
               <span className="skill-badge"><FaGit /> Git</span>
+
+              {/* AUTOMATION */}
+              <span className="skill-badge"><SiN8N /> n8n</span>
+              <span className="skill-badge"><SiZapier /> Zapier</span>
+           
             </div>
+
           </div>
 
         </div>
