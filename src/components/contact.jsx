@@ -53,69 +53,58 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-    setErrorMessage('');
+  e.preventDefault();
+  setIsSubmitting(true);
+  setSubmitStatus(null);
+  setErrorMessage('');
 
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const ownerTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const autoReplyTemplateId = import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  if (!serviceId || !ownerTemplateId || !autoReplyTemplateId || !publicKey) {
+    setSubmitStatus('error');
+    setErrorMessage('Email service configuration error. Please contact me directly.');
+    setIsSubmitting(false);
+    return;
+  }
 
+  try {
+    const emailParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      reply_to: formData.email,
+      to_name: 'JD Deleña',
+    };
 
-    if (!serviceId || !templateId || !publicKey) {
-      console.error('EmailJS environment variables are not properly configured');
-      setSubmitStatus('error');
-      setErrorMessage('Email service configuration error. Please contact me directly.');
-      setIsSubmitting(false);
-      return;
-    }
+    await emailjs.send(serviceId, ownerTemplateId, emailParams, publicKey);
+    await emailjs.send(serviceId, autoReplyTemplateId, emailParams, publicKey);
 
-    try {
-      const emailParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-        to_name: 'JD Deleña',
-        reply_to: formData.email,
-      };
+    setSubmitStatus('success');
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    setSubmitStatus('error');
+    setErrorMessage(
+      error.text || 'Failed to send message. Please try again or contact me directly via email.'
+    );
+  } finally {
+    setIsSubmitting(false);
 
-      const response = await emailjs.send(
-        serviceId,
-        templateId,
-        emailParams,
-        publicKey
-      );
-
-      console.log("Email sent successfully:", response);
-      
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      
-    } catch (error) {
-      console.error("Error sending email:", error);
-      setSubmitStatus('error');
-      setErrorMessage(
-        error.text || 
-        'Failed to send message. Please try again or contact me directly via email.'
-      );
-    } finally {
-      setIsSubmitting(false);
-      
-   
-      setTimeout(() => {
-        setSubmitStatus(null);
-        setErrorMessage('');
-      }, 5000);
-    }
-  };
+    setTimeout(() => {
+      setSubmitStatus(null);
+      setErrorMessage('');
+    }, 5000);
+  }
+};
 
   const contactInfo = [
     {
