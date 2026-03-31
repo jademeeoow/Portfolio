@@ -58,10 +58,10 @@ const Contact = () => {
   setSubmitStatus(null);
   setErrorMessage('');
 
-  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const ownerTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const autoReplyTemplateId = import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID;
-  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  const serviceId = service_ck29ai7;
+  const ownerTemplateId = template_t703d6d;
+  const autoReplyTemplateId = template_t703d6d;
+  const publicKey = AuzJlU8bf05Wn2NNm;
 
   if (!serviceId || !ownerTemplateId || !autoReplyTemplateId || !publicKey) {
     setSubmitStatus('error');
