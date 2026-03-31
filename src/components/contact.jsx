@@ -58,10 +58,10 @@ const Contact = () => {
   setSubmitStatus(null);
   setErrorMessage('');
 
-  const serviceId = service_ck29ai7;
-  const ownerTemplateId = template_t703d6d;
-  const autoReplyTemplateId = template_t703d6d;
-  const publicKey = AuzJlU8bf05Wn2NNm;
+  const serviceId = "service_ck29ai7";
+  const ownerTemplateId = "template_b563k6t";
+  const autoReplyTemplateId = "template_t703d6d";
+  const publicKey = "AuzJlU8bf05Wn2NNm";
 
   if (!serviceId || !ownerTemplateId || !autoReplyTemplateId || !publicKey) {
     setSubmitStatus('error');
