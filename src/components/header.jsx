@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../assets/styles/header.css";
 import logo from "../assets/images/logo/Rlogo.png";
-import cvFile from "../assets/CV/Delena_Ronson.pdf"; // Update with your actual CV filename
+import cvFile from "../assets/CV/resume_ni_jd_with_soft_skills.pdf"; // Update with your actual CV filename
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,7 +16,7 @@ const Header = () => {
     link.href = cvFile;
     
     // Set the download attribute with the desired filename
-    link.download = 'JD-Deleña-CV.pdf'; // You can customize the downloaded filename
+    link.download = 'JD-Deleña-resume.pdf'; // You can customize the downloaded filename
     
     // Append to body, click, and remove
     document.body.appendChild(link);
@@ -56,7 +56,7 @@ const Header = () => {
           <div className="nav-spacer"></div>
 
           <button className="download-btn" onClick={handleDownloadCV}>
-            Download CV
+            Download Resume
           </button>
         </nav>
 

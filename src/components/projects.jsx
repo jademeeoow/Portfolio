@@ -94,11 +94,11 @@ const prevProject = () => {
       image: barangayImage,
       technologies: ["Python", "Django", "SQLite3", "HTML", "CSS", "JavaScript"],
       githubUrl: "https://github.com/alysssi/BARANGAY_DJANGO",
-      liveUrl: "https://delanajd.pythonanywhere.com/",
+      // liveUrl: "https://delanajd.pythonanywhere.com/",
     },
 
   {
-    id: 2,
+    id: 2, 
       title: "RNR ",
       description: "An E-commerce Website for Food Ordering Specifically Tapsilogs.",
       image: rnrImage,
@@ -115,7 +115,7 @@ const prevProject = () => {
       image: bidwaveImage,
       technologies: ["PHP", "MariaDB", "HTML", "CSS", "JavaScript"],
       githubUrl: "https://github.com/alymeeoow/bidwave.git",
-      liveUrl: "https://bidwave.free.nf/",
+      // liveUrl: "https://bidwave.free.nf/",
 
     },
 
@@ -127,7 +127,7 @@ const prevProject = () => {
       image: lineshubImage,
       technologies: ["PHP", "MariaDB", "HTML", "CSS", "JavaScript"],
       githubUrl: "https://github.com/jademeeoow/lineshub",
-      liveUrl: "https://bis.free.nf/templates/html/index.php?i=1",
+      // liveUrl: "https://bis.free.nf/templates/html/index.php?i=1",
 
     },
     {
@@ -164,7 +164,7 @@ const prevProject = () => {
       image: wikangaraboImage,
       technologies: ["Python", "Django", "SQLite3", "Google API", "HTML", "CSS", "JavaScript"],
       githubUrl: "https://github.com/alymeeoow/wikang-arabo.git",
-      liveUrl: "https://your-wikangarabo-demo.com",
+      // liveUrl: "https://your-wikangarabo-demo.com",
     },
  
 
@@ -176,7 +176,7 @@ const prevProject = () => {
       image: tutoriaImage,
       technologies: ["Python", "Django", "SQLite3", "HTML", "CSS", "JavaScript"],
       githubUrl: "https://github.com/alysssi/rnr.git",
-      liveUrl: "https://tutoria2024.pythonanywhere.com/",
+      // liveUrl: "https://tutoria2024.pythonanywhere.com/",
       
   },
 
