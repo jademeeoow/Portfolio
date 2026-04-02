@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="hero-content">
         <h3>Hi, there!</h3>
         <h1>
-          <span>ALY</span> IS HERE TO BE YOUR BACK-END DEVELOPER
+          <span>JD</span> IS HERE TO BE YOUR BACK-END DEVELOPER
         </h1>
         <p className="motto">"If you can define it, I can make it!"</p>
         <p className="tagline">
